@@ -1,35 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="id">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menú Minimalista Mejorado</title>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPT Open Source</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #d7e1f3, #b5d2f1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #222;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #1a2b8f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #1e73be;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #0b5fa3;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
-  <nav class="menu" role="navigation" aria-label="Menú principal">
-    <a href="#" class="link" aria-label="Dashboard">
-      <span class="link-icon">dashboard</span>
-      <span class="link-title">Dashboard</span>
-    </a>
-    <a href="#" class="link" aria-label="Projects">
-      <span class="link-icon">folder</span>
-      <span class="link-title">Projects</span>
-    </a>
-    <a href="#" class="link" aria-label="Messages">
-      <span class="link-icon">chat</span>
-      <span class="link-title">Messages</span>
-    </a>
-    <a href="#" class="link" aria-label="Settings">
-      <span class="link-icon">settings</span>
-      <span class="link-title">Settings</span>
-    </a>
-    <a href="#" class="link" aria-label="Logout">
-      <span class="link-icon">logout</span>
-      <span class="link-title">Logout</span>
-    </a>
-  </nav>
+  <div class="container">
+    <div class="content">
+      <div class="icon">🧩</div>
+      <h1><span>PowerPoint Tentang Open Source</span></h1>
+      <p>Klik tombol di bawah untuk membuat dan mengunduh otomatis file PowerPoint edukatif tentang Open Source.</p>
+      <button class="btn" onclick="downloadPPT()">📄 Buat PowerPoint</button>
+    </div>
+    <footer>© 2025 Blogger Open Source Learning</footer>
+  </div>
+
+  <script>
+    function downloadPPT() {
+      // Link Google Drive baru
+      const fileUrl = "https://drive.google.com/uc?export=download&id=1PQl1tjcp--wgkAxACEdQtW7YF4e07iXy";
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = '';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
 </body>
+
 </html>
